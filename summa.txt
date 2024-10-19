@@ -1,0 +1,3 @@
+This text file is just created to SIMULATE the 'git push' command. Cause for the first time we write
+git push -u origin main but for the subsequent changes, we just write git push. hence atha test panna
+dhan intha txt file created.
