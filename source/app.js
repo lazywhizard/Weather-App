@@ -1,8 +1,10 @@
 const path = require('path')
 const express = require('express')
 const app = express()
-const publicDirectoryPath = 'C:/main/programming/node_udemy/web_server/public'
-const viewsPath = path.join(publicDirectoryPath, '/views')
+const publicDirectoryPath = path.join(__dirname,'../public')
+const viewsPath = path.join(__dirname, '../public/views')
+
+const portNumber = process.env.PORT || 3000
 
 app.use(express.static(publicDirectoryPath))
 
@@ -29,6 +31,6 @@ app.get('*',function(req,res){
     res.send('SORRY MATE!')
 })
 
-app.listen(3000, function(){
-    console.log("Starting at 3000")
+app.listen(portNumber, function(){
+    console.log(`Starting at Port: ${portNumber}`)
 })
